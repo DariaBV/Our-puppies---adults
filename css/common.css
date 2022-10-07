@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+    --color-main: #f4b51e;
+    --color-main-hover: #D5990A;
+    --color-accent: #F82764;
+    --color-secondary: #619ec2;
+    --color-dark: #222;
+    --color-promo-section-bg: #F5F1EF;
+    --color-text-on-dark: #B6B6B6;
+    --color-text-on-light: #616470;
+    --color-month-title-on-light: rgba(97,100,112,0.55);    
+    --color-contact-us: rgb(97,100,112); 
+    --color-date-title: #619ec258;
+    --color-text-light: #fff;
+    --color-bg-light: #fff;
+    --color-bg-section: #F7F7F7;
+    --color-bg-dark: #000;
+    --color-month-title-on-dark: rgba(247, 247, 247, 0.59);
+    --outline-form-color: rgba(34, 34, 34, 0.12);
+    --form-bg-color: #F7F7F7;
+    --outline-active-color:#3B99FC;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+}
