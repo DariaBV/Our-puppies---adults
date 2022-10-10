@@ -24,22 +24,34 @@
         targetDot.classList.add('.current-slide');
     }
 
-    prevButton.addEventListener('click', e => {
-        const currentSlide = slidesContainer.querySelector('.current-slide');
-        const prevSlide = currentSlide.previousElementSibling;
-        const currentDot = dotsNav.querySelector('.current-slide');
-        const prevDot = currentDot.previoustElementSibling;
+    // prevButton.addEventListener('click', e => {
+    //     const currentSlide = slidesContainer.querySelector('.current-slide');
+    //     const prevSlide = currentSlide.previousElementSibling;
+    //     const currentDot = dotsNav.querySelector('.current-slide');
+    //     const prevDot = currentDot.previoustElementSibling;
 
-        moveToSlide(slidesContainer, currentSlide, prevSlide);
-        updateDots(currentDot, prevDot);
+    //     moveToSlide(slidesContainer, currentSlide, prevSlide);
+    //     updateDots(currentDot, prevDot);
+    // });
+
+    let currentIdx = 0;
+    // const currentSlide = slidesContainer.querySelector('.current-slide');
+    prevButton.addEventListener('click', () => {
+
+        currentIdx <= 0 ? (currentIdx = slides.length) : null;
+        slidesContainer.classList.add('transform-animation');
+        currentIdx--;
+        slidesContainer.style.transform = 'translateX(' + `${- slideWidth * currentIdx}px)`;
+        // moveToSlide(slidesContainer, currentSlide, nextSlide);
     });
 
-    function nextSlide() {
-        const currentSlide = slidesContainer.querySelector('.current-slide');
-        console.log(currentSlide);
-    }
-
-    nextButton.addEventListener('click', nextSlide);
+    nextButton.addEventListener('click', () => {
+        currentIdx >= slides.length - 1 ? (currentIdx = -1) : null;
+        slidesContainer.classList.add('transform-animation');
+        currentIdx++;
+        slidesContainer.style.transform = 'translateX(' + `${- slideWidth * currentIdx}px)`;
+        // moveToSlide(slidesContainer, currentSlide, prevSlide);
+    });
 
     // nextButton.addEventListener('click', e => {
     //     const currentSlide = slidesContainer.querySelector('.current-slide');
@@ -49,6 +61,8 @@
 
     //     moveToSlide(slidesContainer, currentSlide, nextSlide);
     //     updateDots(currentDot, nextDot);
+
+
     // });
 
     dotsNav.addEventListener('click', e => {
