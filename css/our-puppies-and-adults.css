@@ -1,8 +1,9 @@
 .our-puppies-and-adults__carousel {
     position: relative;
     margin-top: 45px;
-    /* min-height: 630px; */
-    width: 100%;
+    min-height: 350px;
+    /* width: 100%; */
+    overflow: hidden;
 }
 
 .our-puppies-and-adults__header {
@@ -38,22 +39,15 @@
     /* object-fit: cover; */
 }
 
-.our-puppies-and-adults__carousel-slides {
-    /* carousel__track-container */
+/* .our-puppies-and-adults__carousel-slides {
     height: 100%;
-    /* overflow: hidden; */
-
-}
+} */
 
 .our-puppies-and-adults__carousel-items {
-    /* carousel__track */
-    padding: 0;
-    margin: 0;
-    transition: transform 500ms ease-in
+    transition: transform 500ms ease-in;
 }
 
 .our-puppies-and-adults__cart-containar {
-    /* carousel__slide */
     position: absolute;
     padding: 0 15px;
     width: 100%;
@@ -77,6 +71,7 @@
     height: 24px;
     border-radius: 50%;
     cursor: pointer;
+    transition: opacity .2s ease-in;
 }
 
 .our-puppies-and-adults__button > svg {
@@ -122,14 +117,13 @@
     opacity: 1;
 }
 
-.indicators-dot.current-slide {
+/* .indicators-dot .current-slide {
+    opacity: .75;
+} */
+
+.indicators-dot:focus {
     opacity: .75;
 }
-
-/* .our-puppies-and-adults__indicators.current-slide:active {
-    opacity: .75;
-    background: red;
-} */
 
 @media (min-width: 768px){
 
@@ -148,9 +142,9 @@
         font-size: 23px;
     }
 
-    /* .our-puppies-and-adults__carousel  {
-        min-width: 552px;
-    } */
+    .our-puppies-and-adults__carousel  {
+        min-height: 440px;
+    }
 
     .our-puppies-and-adults__button {
         width: 32px;
@@ -167,7 +161,11 @@
 
     .our-puppies-and-adults {
         padding-top: 100px;
-    padding-bottom: 110px;
+        padding-bottom: 110px;
+    }
+
+    .our-puppies-and-adults__carousel  {
+        min-height: 540px;
     }
 
     .our-puppies-and-adults__title {
@@ -187,7 +185,11 @@
     }
 }
 
-@media (min-width: 1199px){
+@media (min-width: 1199px) {
+
+    .our-puppies-and-adults__carousel  {
+        min-height: 600px;
+    }
 
     .our-puppies-and-adults__button {
         background: transparent;
